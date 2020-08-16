@@ -2,19 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.scss";
 import * as serviceWorker from "./serviceWorker";
-import Counter from "./Counter/counter";
+import { BrowserRouter } from "react-router-dom";
+import App from "./App";
 
 // import App from "./App";
 // import TicTacToe from "./TicTacToe/tictactoe";
-// import { Router, Route } from "react-router";
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Router>
-      <Route path="/" component={App}>
-      </Route>
-    </Router> */}
-    <Counter />
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
   </React.StrictMode>,
   document.getElementById("root")
 );
