@@ -3,7 +3,13 @@ import { Route, Link } from "react-router-dom";
 import "./App.css";
 import Counter from "./Counter/counter";
 import { Switch } from "react-router-dom";
-// import TicTacToe from "./TicTacToe/tictactoe";
+import { createBrowserHistory } from "history";
+import TicTacToe from "./TicTacToe/tictactoe";
+
+export const history = createBrowserHistory({
+  basename: process.env.PUBLIC_URL,
+});
+
 class App extends Component {
   render() {
     return (
@@ -19,10 +25,14 @@ class App extends Component {
           <li>
             <Link to="/counter">Counter</Link>
           </li>
+          <li>
+            <Link to="/tictactoe">TicTacToe</Link>
+          </li>
         </ol>
 
         <Switch>
           <Route path="/counter" exact component={Counter} />
+          <Route path="/tictactoe" exact component={TicTacToe} />
           <Route path="/" exact>
             <h1>Hello from the homepage!</h1>
           </Route>
