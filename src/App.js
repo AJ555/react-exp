@@ -9,7 +9,6 @@ class App extends Component {
   render() {
     return (
       <div className="main-container-app">
-        <p>This message is from a class component</p>
         <h1>Hello World</h1>
         <Welcome name="User"></Welcome>
         <p>Click on the links to navigate further:</p>
@@ -41,7 +40,6 @@ class App extends Component {
 function Welcome(props) {
   return (
     <div>
-      <p>This message is from a functional component</p>
       <h1>Welcome, {props.name}</h1>
     </div>
   );
