@@ -3,12 +3,7 @@ import { Route, Link } from "react-router-dom";
 import "./App.css";
 import Counter from "./Counter/counter";
 import { Switch } from "react-router-dom";
-import { createBrowserHistory } from "history";
 import TicTacToe from "./TicTacToe/tictactoe";
-
-export const history = createBrowserHistory({
-  basename: process.env.PUBLIC_URL,
-});
 
 class App extends Component {
   render() {
