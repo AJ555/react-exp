@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className="main-container-app">
         <h1>Hello World</h1>
-        <Welcome name="User"></Welcome>
+        <Welcome name="to my Application"></Welcome>
         <p>Click on the links to navigate further:</p>
         <ol>
           <li>
@@ -40,7 +40,7 @@ class App extends Component {
 function Welcome(props) {
   return (
     <div>
-      <h1>Welcome, {props.name}</h1>
+      <h1>Welcome {props.name}</h1>
     </div>
   );
 }
